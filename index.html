@@ -25,7 +25,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
-	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -92,17 +92,23 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 
 		<div id="colorlib-main">
 			<section id="colorlib-hero" class="js-fullheight" data-section="home">
-				<div class="flexslider js-fullheight">
+				<div class="flexslider js-fullheight" style="background-image: url(images/shun_monokulro2.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: bottom center;
+				/* min-height: 400px; */
+				position: relative;">
 					<ul class="slides">
-				   	<li style="background-image: url(images/img_bg_1.jpg);">
-				   		<div class="overlay"></div>
+				   	<!-- <li style="background-image: url(images/img_bg_1.gif);"> -->
+					<li>
+						<div class="overlay"></div>
 				   		<div class="container-fluid">
 				   			<div class="row">
 					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 									<div class="slider-text-inner js-fullheight">
 										<div class="desc">
 						   					<h1>Hi! <br>I'm Shun</h1>
-										   <h2>Narou RPG, a Minecraft game server in the works</h2>
+										   <!-- <h2>Narou RPG, a Minecraft game server in the works</h2> -->
 										   <p><a href="https://sites.google.com/view/narourpg/home" target="_blank" class="btn btn-primary btn-learn" style="pointer-events: auto;">Visit the NAROU PRG website<i class="icon-briefcase3"></i></a></p>
 										</div>
 					   				</div>
@@ -110,23 +116,25 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					   		</div>
 				   		</div>
 				   	</li>
-				   	<li style="background-image: url(images/img_bg_2.jpg);">
-				   		<div class="overlay"></div>
+				   	<!-- <li style="background-image: url(images/img_bg_2.jpg);"> -->
+					<li>
+						<div class="overlay"></div>
 				   		<div class="container-fluid">
 				   			<div class="row">
 					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text">
 					   				<div class="slider-text-inner">
 					   					<div class="desc">
 						   					<h1>I am <br>a Engineer</h1>
-												<h2>Check out my github</h2>
+												<!-- <h2>Check out my github</h2> -->
 												<p><a class="btn btn-primary btn-learn" href="https://github.com/seisyun9665" target="_blank">Visit the Github<i class="icon-github"></i></a></p>
 											</div>
 					   				</div>
 					   			</div>
 					   		</div>
-				   		</div>
+						</div>
 				   	</li>
-				    <li style="background-image: url(images/img_bg_2.jpg);">
+				    <!-- <li style="background-image: url(images/img_bg_2.jpg);"> -->
+					<li>
 						<div class="overlay"></div>
 						<div class="container-fluid">
 							<div class="row">
@@ -134,7 +142,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 									<div class="slider-text-inner">
 										<div class="desc">
 											<h1>I am <br>a University Student</h1>
-											 <h2>University of Tsukuba, Faculty of Informatics, College of Media Arts, Science and Technology</h2>
+											 <!-- <h2>University of Tsukuba, Faculty of Informatics, College of Media Arts, Science and Technology</h2> -->
 											 <p><a class="btn btn-primary btn-learn" href="https://www.mast.tsukuba.ac.jp/" target="_blank">Visit the HomePage<i class="icon-book"></i></a></p>
 										 </div>
 									</div>
@@ -143,7 +151,8 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 						</div>
  					</li>
 				    </ul>
-			  	</div>
+					<canvas id="canvas"></canvas>
+				</div>
 			</section>
 
 			<section class="colorlib-about" data-section="about">
@@ -158,7 +167,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 											2021年までは<strong>一関高専情報・ソフトウェア系</strong>に所属し、
 											<strong>プログラミング</strong>、<strong>アプリ開発</strong>、<strong>ネットワークシステム</strong>などを学んだり、
 											所属していた同好会でサークル長を務め、小中学生向けのプログラミング講座を行ったりしました。</br>
-											現在は<strong>筑波大学情報学群</strong>に所属し、アルバイトやバレーサークルでの活動などで大学生活を謳歌しています。
+											現在は<strong>筑波大学情報学群</strong>に所属し、アルバイトやサークルなど大学生活を謳歌しています。
 										</p>
 									</div>
 								</div>
@@ -310,11 +319,19 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					</div>
 					<div class="row">
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
-							<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
+							<p>
+								私がこれまで培った技術や経験です。<br>
+								<strong>ウェブ開発系</strong>は授業の課題やチーム開発、
+								<strong>Python</strong>は研究活動、
+								<strong>Java</strong>は個人的なゲーム制作を通して、<br>
+								それぞれ身につけてきました。<br>
+								それと体を動かすことは人生を充実させる重要な要素だと考えていて、<br>
+								最近は暇さえあればバレーボールのコートでサーブレシーブを練習しています。
+							</p>
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 							<div class="progress-wrap">
-								<h3>Photoshop</h3>
+								<h3>Java</h3>
 								<div class="progress">
 								 	<div class="progress-bar color-1" role="progressbar" aria-valuenow="75"
 								  	aria-valuemin="0" aria-valuemax="100" style="width:75%">
@@ -325,7 +342,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 							<div class="progress-wrap">
-								<h3>jQuery</h3>
+								<h3>Python</h3>
 								<div class="progress">
 								 	<div class="progress-bar color-2" role="progressbar" aria-valuenow="60"
 								  	aria-valuemin="0" aria-valuemax="100" style="width:60%">
@@ -336,22 +353,22 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 							<div class="progress-wrap">
-								<h3>HTML5</h3>
+								<h3>HTML/CSS</h3>
 								<div class="progress">
-								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="85"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:85%">
-								    <span>85%</span>
+								 	<div class="progress-bar color-3" role="progressbar" aria-valuenow="45"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:45%">
+								    <span>45%</span>
 								  	</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 							<div class="progress-wrap">
-								<h3>CSS3</h3>
+								<h3>Javascript</h3>
 								<div class="progress">
-								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="90"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:90%">
-								    <span>90%</span>
+								 	<div class="progress-bar color-4" role="progressbar" aria-valuenow="30"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:30%">
+								    <span>30%</span>
 								  	</div>
 								</div>
 							</div>
@@ -360,20 +377,20 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 							<div class="progress-wrap">
 								<h3>WordPress</h3>
 								<div class="progress">
-								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="70"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:70%">
-								    <span>70%</span>
+								 	<div class="progress-bar color-5" role="progressbar" aria-valuenow="30"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:30%">
+								    <span>30%</span>
 								  	</div>
 								</div>
 							</div>
 						</div>
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
 							<div class="progress-wrap">
-								<h3>SEO</h3>
+								<h3>Volleyball</h3>
 								<div class="progress">
-								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="80"
-								  	aria-valuemin="0" aria-valuemax="100" style="width:80%">
-								    <span>80%</span>
+								 	<div class="progress-bar color-6" role="progressbar" aria-valuenow="40"
+								  	aria-valuemin="0" aria-valuemax="100" style="width:40%">
+								    <span>40%</span>
 								  	</div>
 								</div>
 							</div>
@@ -487,8 +504,7 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">Experience</span>
-							<h2 class="colorlib-heading animate-box">Work Experience</h2>
+							<h2 class="colorlib-heading animate-box">Experience</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -502,21 +518,29 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					               </div>
 
 					               <div class="timeline-label">
-					                  <h2><a href="#">Full Stack Developer</a> <span>2017-2018</span></h2>
-					                  <p>Tolerably earnestly middleton extremely distrusts she boy now not. Add and offered prepare how cordial two promise. Greatly who affixed suppose but enquire compact prepare all put. Added forth chief trees but rooms think may.</p>
+					                  <h2><a href="#">生誕～幼稚園</a> <span>2001-2008</span></h2>
+					                  <p>
+										生まれてから4歳までは全く喋らなかったが、
+										ある日を境にして、視界に入ったものすべてを言葉に変換して吐き出すように。<br>
+										お気に入りの言葉は「たまげに」「とうろもこし」。
+									</p>
 					               </div>
 					            </div>
 					         </article>
 
-
-					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+							 <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
 					            <div class="timeline-entry-inner">
 					               <div class="timeline-icon color-2">
 					                  <i class="icon-pen2"></i>
 					               </div>
 					               <div class="timeline-label">
-					               	<h2><a href="#">Front End Developer at Google Company</a> <span>2017-2018</span></h2>
-					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+					               	<h2><a href="#">小学生</a> <span>2008-2014</span></h2>
+								   <p>
+										3度の飯よりゲームが好き。ニンテンドーDSに最も強い興味を示す。<br>
+										親が使っていたパソコンにも強烈に興味を示し、
+										半ば本能的にタイピング技術を会得する。
+									</p>
+
 					               </div>
 					            </div>
 					         </article>
@@ -527,8 +551,14 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					                  <i class="icon-pen2"></i>
 					               </div>
 					               <div class="timeline-label">
-					               	<h2><a href="#">System Analyst</a> <span>2017-2018</span></h2>
-					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+					               	<h2><a href="#">中学生</a> <span>2014-2017</span></h2>
+					                  <p>
+										サンドボックスゲーム「Minecraft」にドハマりする。<br>
+										「成績オール5とったらパソコン買ってあげる」と冗談半分で親に言われ、<br>
+										それを本気で信じて死にものぐるいで勉強した結果、全教科最高評価を取る。<br>
+										念願のゲーミングPCを手に入れてゲームに没頭したところ、<br>
+										今度は成績が落ちてしまい、親からゲーム禁止を言い渡されて割としっかりと落ち込む。
+									  </p>
 					               </div>
 					            </div>
 					         </article>
@@ -539,8 +569,15 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					                  <i class="icon-pen2"></i>
 					               </div>
 					               <div class="timeline-label">
-					               	<h2><a href="#">Creative Designer</a> <span>2017-2018</span></h2>
-					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+					               	<h2><a href="#">一関高専</a> <span>2017-2022</span></h2>
+									   <p>
+										1～3年生で「パソコンの歴史」「通信の仕組み」など情報学の基本的な知識を習得。<br>
+										4、5年生ではWebアプリケーションのチーム開発、
+										機械学習によるデータ解析など、<br>
+										より実践的な開発経験を積む。<br>
+										所属していたサークルでは「小中学生向けプログラミング教室」を開催し、<br>
+										サークル長としていろいろ頑張った。
+									</p>  
 					               </div>
 					            </div>
 					         </article>
@@ -551,9 +588,19 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 					                  <i class="icon-pen2"></i>
 					               </div>
 					               <div class="timeline-label">
-					               	<h2><a href="#">UI/UX Designer at Envato</a> <span>2017-2018</span></h2>
-					                  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-					               </div>
+					               	<h2><a href="#">筑波大学</a> <span>2022-now</span></h2>
+									<p>
+										情報メディア創成学類の3年生として編入を果たす。<br>
+										より高度な情報技術を学びつつ、<br>
+										<a href="https://tsukuba-cojt.github.io/">COJT 組み込み技術キャンパスOJT											<i class="bi-box-arrow-up-right"></i></a>
+										などの授業と通して、<br>
+										<a href="https://github.com/rikutons/COJTRhythmGame">
+											教育向けゲームの開発
+											<i class="bi-box-arrow-up-right"></i>
+										</a>
+											やネットワーク解析アプリの発表などを行う。<br>
+									</p>
+								</div>
 					            </div>
 					         </article>
 
@@ -573,15 +620,18 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<span class="heading-meta">My Work</span>
-							<h2 class="colorlib-heading animate-box">Recent Work</h2>
+							<h2 class="colorlib-heading animate-box">Work</h2>
 						</div>
 					</div>
+<!-- 
 					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 						<div class="col-md-12">
-							<p class="work-menu"><span><a href="#" class="active">Graphic Design</a></span> <span><a href="#">Web Design</a></span> <span><a href="#">Software</a></span> <span><a href="#">Apps</a></span></p>
+							<p class="work-menu">
+								<span><a href="#" class="active">Graphic Design</a></span>
+							</p>
 						</div>
 					</div>
+ -->
 					<div class="row">
 						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
 							<div class="project" style="background-image: url(images/img-1.jpg);">
@@ -674,11 +724,13 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 							</div>
 						</div>
 					</div>
+<!-- 					
 					<div class="row">
 						<div class="col-md-12 animate-box">
 							<p><a href="#" class="btn btn-primary btn-lg btn-load-more">Load more <i class="icon-reload"></i></a></p>
 						</div>
 					</div>
+-->
 				</div>
 			</section>
 
@@ -801,6 +853,8 @@ Copyright <script>document.write(new Date().getFullYear());</script> All rights 
 	</div><!-- end:container-wrap -->
 	</div><!-- end:colorlib-page -->
 
+	<!-- header animation -->
+	<script src="js/background.js"></script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
