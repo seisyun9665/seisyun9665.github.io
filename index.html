@@ -1,24 +1,24 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="ja">
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Shun Seino</title>
+	<title>清野 駿 | Shun Seino</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="" />
-	<meta name="keywords" content="" />
-	<meta name="author" content="" />
+	<meta name="description" content="清野駿のポートフォリオサイトです。" />
+	<meta name="keywords" content="清野駿,ポートフォリオ,エンジニア" />
+	<meta name="author" content="Shun Seino" />
 
-  <!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="清野 駿 | Shun Seino"/>
+	<meta property="og:image" content="images/about.jpg"/>
 	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
+	<meta property="og:site_name" content="清野 駿 | Shun Seino"/>
+	<meta property="og:description" content="清野駿のポートフォリオサイトです。"/>
+	<meta name="twitter:title" content="清野 駿 | Shun Seino" />
+	<meta name="twitter:image" content="images/about.jpg" />
 	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
+	<meta name="twitter:card" content="summary" />
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
@@ -35,7 +35,7 @@
 	<!-- Flexslider  -->
 	<link rel="stylesheet" href="css/flexslider.css">
 	<!-- Flaticons  -->
-	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flaticon@latest/flaticon.css">
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -48,6 +48,219 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
+
+	<style>
+	.container-wrap {
+	    padding-left: 0;
+	    margin-left: 0;
+	    width: 100%;
+	    max-width: 100%;
+	}
+
+	#colorlib-page {
+	    width: 100%;
+	    max-width: 100%;
+	    padding: 0;
+	    margin: 0;
+	}
+
+	#colorlib-aside {
+	    margin-left: 0;
+	}
+
+	/* レスポンシブ対応が必要な場合 */
+	@media screen and (max-width: 768px) {
+	    .container-wrap {
+	        padding: 0;
+	    }
+	}
+
+	/* 日本語フォントの設定 */
+	body {
+		font-family: 'Quicksand', 'Noto Sans JP', sans-serif;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Playfair Display', 'Noto Serif JP', serif;
+	}
+
+	/* テキストの基本スタイル */
+	.colorlib-narrow-content p {
+	    font-size: 1.1em;
+	    line-height: 1.8;
+	    max-width: 800px; /* 読みやすい行の長さを維持 */
+	    margin: 0 0 1em;
+	    text-align: left;
+	}
+
+	/* 見出しのスタイル */
+	.colorlib-heading {
+	    font-size: 2.5em;
+	    margin-bottom: 2em;
+	    font-weight: 700;
+	    text-transform: uppercase;
+	    letter-spacing: 5px;
+	    line-height: 1.8;
+	    text-align: left;
+	}
+
+	/* スキルセクションの説明文 */
+	.skills-description {
+	    max-width: 800px;
+	    margin: 2em 0;
+	    font-size: 1.1em;
+	    line-height: 1.8;
+	}
+
+	/* 改行位置の調整 */
+	.text-break-point {
+	    display: block;
+	    margin-top: 1em;
+	}
+
+	/* レスポンシブ対応 */
+	@media screen and (min-width: 1200px) {
+	    .colorlib-narrow-content {
+	        padding: 0 4em;
+	    }
+	    
+	    .colorlib-narrow-content p {
+	        font-size: 1.2em;
+	    }
+	}
+
+	@media screen and (max-width: 768px) {
+	    .colorlib-narrow-content p {
+	        font-size: 1em;
+	        padding: 0 1em;
+	    }
+	}
+
+	/* テキストの基本スタイル */
+	.about-desc p {
+	    font-size: 1.1em;
+	    line-height: 1.8;
+	    width: 100%; /* 親要素の幅いっぱいに */
+	    max-width: 100%; /* 最大幅も100%に */
+	    margin: 0 0 1em;
+	    text-align: left;
+	}
+
+	/* 改行の調整 */
+	.about-desc br {
+	    display: none; /* 自動改行を優先するため、明示的な改行を削除 */
+	}
+
+	/* テキストブロックのスタイル */
+	.text-block {
+	    display: block;
+	    margin-bottom: 1em;
+	}
+
+	/* レスポンシブ対応 */
+	@media screen and (max-width: 768px) {
+	    .about-desc p {
+	        padding: 0 1em;
+	    }
+	}
+
+	/* スキルセクションの説明文のスタイルを追加 */
+	.colorlib-skills .col-md-12 p {
+	    width: 100%;
+	    max-width: 100%;
+	    margin: 0;
+	    padding: 0;
+	}
+
+	.project-card {
+	    display: flex;
+	    gap: 2rem;
+	    margin-bottom: 3rem;
+	    padding: 1.5rem;
+	    background: #fff;
+	    border-radius: 8px;
+	    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+	}
+
+	.project-image {
+	    flex: 0 0 40%;
+	}
+
+	.project-image img {
+	    width: 100%;
+	    height: auto;
+	    border-radius: 4px;
+	}
+
+	.project-content {
+	    flex: 1;
+	}
+
+	.project-content h3 {
+	    margin-top: 0;
+	    margin-bottom: 1rem;
+	    font-family: 'Quicksand', 'Noto Sans JP', sans-serif;
+	    font-weight: 500;
+	    font-size: 4.5rem;
+	    letter-spacing: 0.5px;
+	}
+
+	.project-content h3 a {
+	    color: #2c98f0;
+	    text-decoration: none;
+	    transition: color 0.3s ease;
+	}
+
+	.project-content h3 a:hover {
+	    color: #1a75c7;
+	}
+
+	.project-description {
+	    margin-bottom: 1.5rem;
+	}
+
+	.project-links a {
+	    display: inline-flex;
+	    align-items: center;
+	    gap: 0.5rem;
+	    padding: 0.5rem 1rem;
+	    background: #f5f5f5;
+	    border-radius: 4px;
+	    text-decoration: none;
+	    color: #333;
+	    transition: background 0.3s;
+	}
+
+	.project-links a:hover {
+	    background: #e5e5e5;
+	}
+
+	@media (max-width: 768px) {
+	    .project-card {
+	        flex-direction: column;
+	    }
+	    
+	    .project-image {
+	        flex: 0 0 auto;
+	    }
+
+	    /* 各プロジェクトのタイトルサイズ調整 */
+	    .project-content h3 {
+	        font-size: 2rem;  /* もとの1.5remから小さく */
+	    }
+	}
+
+	</style>
+
+	<!-- Google Fonts - 日本語フォントの追加 -->
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 	</head>
 	<body>
@@ -71,18 +284,12 @@
 						<li><a href="#" data-nav-section="experience">Experience</a></li>
 						<li><a href="#" data-nav-section="work">Work</a></li>
 						<!-- <li><a href="#" data-nav-section="blog">Blog</a></li> -->
-						<li><a href="#" data-nav-section="contact">Contact</a></li>
 					</ul>
 				</div>
 			</nav>
 
 			<div class="colorlib-footer">
-				<p><small>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Shun Seino<!-- Copyright <script>document.write(new Date().getFullYear());</script> All rights reserved.  -->
-<!-- Made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> 
- <!-- <span>Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></span> -->
- <span>Images: <a href="https://unsplash.com/" target="_blank">Unsplash.com</a></span></small></p>
+				<p><small>&copy; 2024 清野 駿 (Shun Seino). All Rights Reserved.</small></p>
 				<ul>
 					<li><a href="#"><i class="icon-facebook2"></i></a></li>
 					<li><a href="#"><i class="icon-twitter2"></i></a></li>
@@ -95,7 +302,7 @@ Shun Seino<!-- Copyright <script>document.write(new Date().getFullYear());</scri
 
 		<div id="colorlib-main">
 			<section id="colorlib-hero" class="js-fullheight" data-section="home">
-				<div class="flexslider js-fullheight" style="background-image: url(images/shun_monokulro2.png);
+				<div class="flexslider js-fullheight" style="
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-position: center center;
@@ -166,11 +373,16 @@ Shun Seino<!-- Copyright <script>document.write(new Date().getFullYear());</scri
 								<div class="col-md-12">
 									<div class="about-desc">
 										<h2 class="colorlib-heading">Who Am I?</h2>
-										<p>清野駿です。</br>
-											2021年までは<strong>一関高専情報・ソフトウェア系</strong>に所属し、
-											<strong>プログラミング</strong>、<strong>アプリ開発</strong>、<strong>ネットワークシステム</strong>などを学んだり、
-											所属していた同好会でサークル長を務め、小中学生向けのプログラミング講座を行ったりしました。</br>
-											現在は<strong>筑波大学情報学群</strong>に所属し、アルバイトやサークルなど大学生活を謳歌しています。
+										<p>
+											清野駿です。
+											<span class="text-block">
+												2021年までは<strong>一関高専情報・ソフトウェア系</strong>に所属し、
+												<strong>プログラミング</strong>、<strong>アプリ開発</strong>、<strong>ネットワークシステム</strong>などを学んだり、
+												所属していた同好会でサークル長を務め、小中学生向けのプログラミング講座を行ったりしました。
+											</span>
+											<span class="text-block">
+												現在は<strong>筑波大学情報学群</strong>に所属し、アルバイトやサークルなど大学生活を謳歌しています。
+											</span>
 										</p>
 									</div>
 								</div>
@@ -282,9 +494,9 @@ Shun Seino<!-- Copyright <script>document.write(new Date().getFullYear());</scri
 						</div>
 						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
 							<p>
-								<strong>ウェブ開発系</strong>は授業の課題やチーム開発、
+								<strong>ウェブ開発系</strong>はインターンや個人開発、
 								<strong>Python</strong>は研究活動、
-								<strong>Java</strong>は個人的なゲーム制作を通して、<br>
+								<strong>Java</strong>は個人的なゲーム開発を通して、<br>
 								それぞれ身につけてきました。<br>
 								それと<strong>体を動かすことは人生を充実させる重要な要素</strong>だと考えていて、<br>
 								最近は暇さえあれば<strong>バレーボール</strong>のコートでサーブレシーブを練習しています。
@@ -362,7 +574,7 @@ Shun Seino<!-- Copyright <script>document.write(new Date().getFullYear());</scri
 										<span>2014-2017</span></h2>
 					                  <p>
 										サンドボックスゲーム「<strong>Minecraft</strong>」にドハマりする。<br>
-										「成績オール5とったらパソコン買ってあげる」と冗談半分で親に言われ、<br>
+										「成績オール5とったらパソコン買ってあげる」と冗半分で親にわれ、<br>
 										それを本気で信じて死にものぐるいで勉強した結果、<strong>全教科最高評価</strong>を取る。<br>
 										念願のゲーミングPCを手に入れてゲームに没頭したところ、<br>
 										今度は成績が落ちてしまい、親からゲーム禁止を言い渡されて割としっかりと落ち込む。
@@ -393,7 +605,7 @@ Shun Seino<!-- Copyright <script>document.write(new Date().getFullYear());</scri
 											<i class="bi-box-arrow-up-right"></i>
 										</a>
 										を開催し、<br>
-										<strong>サークル長</strong>としていろいろ頑張った。
+										<strong>サークル</strong>としていろいろ頑張った。
 									</p>
 					               </div>
 					            </div>
@@ -412,7 +624,7 @@ Shun Seino<!-- Copyright <script>document.write(new Date().getFullYear());</scri
 										<span>2022-now</span></h2>
 									<p>
 										<strong>情報メディア創成学類の3年生</strong>として<strong>編入</strong>を果たす。<br>
-										より高度な情報技術を学びつつ、<br>
+										より度な情報技術を学びつつ、<br>
 										<a href="https://tsukuba-cojt.github.io/" target="_blank">
 											COJT 組み込み技術キャンパスOJT
 											<i class="bi-box-arrow-up-right"></i>
@@ -443,12 +655,12 @@ Shun Seino<!-- Copyright <script>document.write(new Date().getFullYear());</scri
 			<section class="colorlib-work" data-section="work">
 				<div class="colorlib-narrow-content">
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-							<h2 class="colorlib-heading animate-box">Work</h2>
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 " >
+							<h2 class="colorlib-heading ">Work</h2>
 						</div>
 					</div>
 <!-- 
-					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+					<div class="row row-bottom-padded-sm " >
 						<div class="col-md-12">
 							<p class="work-menu">
 								<span><a href="#" class="active">Graphic Design</a></span>
@@ -457,280 +669,284 @@ Shun Seino<!-- Copyright <script>document.write(new Date().getFullYear());</scri
 					</div>
  -->
 						<!-- G2Studio インターンシップ - SAUNA PANIC -->
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/sauna-result-mini.png);">
-								<div class="desc">
-									<div class="con">
-										<h3>
-											<a href="https://note.g2-studios.net/n/n71d814f6b5ff?gs=4b4c44f60bfb" target="_blank">
-												SAUNA PANIC
-											</a>
-										</h3>
-										<span>
-											<strong>G2Studioインターンシップでの3日間チーム開発</strong>プロェクト。<br>
-											UI/UX、サウンド、レベルデザインを担当し、<br>
-											<strong>チーム内の議論・報告のまとめ役</strong>として活動。<br>
-											オンラインでのコミュニケーションや技術レベルの差など、<br>
-											様々な課題を克服しながらプロジェクトを完遂しました。
-										</span>
-										<p class="icon">
-											<span>
-												<a href="https://note.g2-studios.net/n/n71d814f6b5ff?gs=4b4c44f60bfb" target="_blank">
-													<i class="bi-box-arrow-up-right"></i>
-													Article
-												</a>
-											</span>
-										</p>
+						<div class="col-md-12 " >
+							<div class="project-card">
+								<div class="project-image">
+									<img src="images/sauna-result-mini.png" alt="SAUNA PANIC">
+								</div>
+								<div class="project-content">
+									<h3>
+										<a href="https://note.g2-studios.net/n/n71d814f6b5ff?gs=4b4c44f60bfb" target="_blank">
+											SAUNA PANIC
+										</a>
+									</h3>
+									<p class="project-description">
+										<strong>G2Studioインターンシップの3日間チーム開発</strong>プロジェクト<br>
+										UI/UX、サウンド、レベルデザインを担当し、<br>
+										<strong>チーム内の議論・報告のまとめ役</strong>として活動。<br>
+										オンラインでのコミュニケーションや技術レベルの差など、<br>
+										様々な課題を克服しながらプロジェクトを完遂しました。
+									</p>
+									<div class="project-links">
+										<a href="https://note.g2-studios.net/n/n71d814f6b5ff?gs=4b4c44f60bfb" target="_blank">
+											<i class="bi-box-arrow-up-right"></i> Article
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>
 
 						<!-- TAYOUSEI GAME -->
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/tayousei.png);">
-								<div class="desc">
-									<div class="con">
-										<h3>
-											<a href="https://unityroom.com/games/tayoseigame" target="_blank">
+						<div class="col-md-12 " >
+							<div class="project-card">
+								<div class="project-image">
+									<img src="images/tayousei.png" alt="TAYOUSEI GAME">
+								</div>
+								<div class="project-content">
+									<h3>
+										<a href="https://unityroom.com/games/tayoseigame" target="_blank">
 												TAYOUSEI GAME
-											</a>
-										</h3>
-										<span>
-											<strong>大学でのチームゲーム開発プロジェクト</strong>として実施。<br>
-											リードエンジニアとして全体を統括し、<br>
-											<strong>VSCODEのLive Share機能</strong>や<strong>アジャイル開発手法</strong>を導入。<br>
-											チームメンバーの成長とプロジェクトの完遂を実現しました。
-										</span>
-										<p class="icon">
-											<span>
-												<a href="https://unityroom.com/games/tayoseigame" target="_blank">
-													<i class="bi-controller"></i>
-													Play
-												</a>
-											</span>
-											<span>
-												<a href="https://github.com/seisyun9665/TayouseiSuika/" target="_blank">
-													<i class="icon-github"></i>
-													Github
-												</a>
-											</span>
-										</p>
+										</a>
+									</h3>
+									<p class="project-description">
+										<strong>大学でのチームゲーム開発プロジェクト</strong>として実施。<br>
+										リードエンジニアとして全体を統括し、<br>
+										<strong>VSCODEのLive Share機能</strong>や<strong>アジャイル開発手法</strong>を導入。<br>
+										チームメンバーの成長とプロジェクトの完遂を実現しました。
+									</p>
+									<div class="project-links">
+										<a href="https://unityroom.com/games/tayoseigame" target="_blank">
+											<i class="bi-controller"></i>
+											Play
+										</a>
+										<a href="https://github.com/seisyun9665/TayouseiSuika/" target="_blank">
+											<i class="icon-github"></i>
+											Github
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>
 
-						<!-- ラウドサーバー構築 -->
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/aws.png);">
-								<div class="desc">
-									<div class="con">
-										<h3>クラウドサーバー構築</h3>
-										<span>
-											<strong>AWSとOCIを活用したゲームサーバーの構築・運営</strong>プロジェクト。<br>
-											AWSの無料期間を1年間活用した後、<br>
-											<strong>OCIの永久無料枠</strong>でのサーバー運営に移行。<br>
-											サーバー紹介用サイトの公開まで実施しました。
-										</span>
-									</div>
+						<!-- ラウドサーバー構築 -->	
+						<div class="col-md-12 " >
+							<div class="project-card">
+								<div class="project-image">
+									<img src="images/aws.png" alt="クラウドサーバー構築">
+								</div>
+								<div class="project-content">
+									<h3>クラウドサーバー構築</h3>
+									<p class="project-description">
+										<strong>AWSとOCIを活用したゲームサーバーの構築・運営</strong>プロジェクト。<br>
+										AWSの無料期間を1年間活用した後、<br>
+										<strong>OCIの永久無料枠</strong>でのサーバー運営に移行。<br>
+										サーバー紹介用サイトの公開まで実施しました。
+									</p>
 								</div>
 							</div>
 						</div>
 
 						<!-- 運動会企画・運営 -->
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/sports.png);">
-								<div class="desc">
-									<div class="con">
-										<h3>運動会企画・運営</h3>
-										<span>
-											<strong>人を集めた企画・運営の経験を得るため</strong>に実施。<br>
-											有志による運動会を主催し、<br>
-											協力者への説得や説明での苦労を克服しながら、<br>
-											<strong>目標の10人を大きく超える20人規模</strong>でのイベント開催を実現。
-										</span>
-									</div>
+						<div class="col-md-12 " >
+							<div class="project-card">
+								<div class="project-image">
+									<img src="images/sports.png" alt="運動会企画・運営">
+								</div>	
+								<div class="project-content">
+									<h3>運動会企画・運営</h3>
+									<p class="project-description">
+										<strong>人を集めた企画・運営の経験を得るため</strong>に実施。<br>
+										有志による運動会を主催し、<br>
+										協力者への説得や説明での苦労を克服しながら、<br>
+										目標の10人を大きく超える20人規模でのイベント開催を実現。
+									</p>
 								</div>
 							</div>
 						</div>
 						
 						<!-- TsumuTsumuModoki -->
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/tsumutsumumodoki-mini.png);">
-								<div class="desc">
-									<div class="con">
-										<h3>
-											<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
-												ツムツムもどき
-											</a>
-										</h3>
+						<div class="col-md-12 " >
+							<div class="project-card">
+								<div class="project-image">
+									<img src="images/tsumutsumumodoki-mini.png" alt="ツムツムもどき">
+								</div>
+								<div class="project-content">
+									<h3>
+										<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
+											ツムツムもどき
+										</a>
+									</h3>
+									<p class="project-description">
 										<strong>Unity</strong>で開発したパズルゲームです。<br>
-										同じ種類のフルーツを繋げて消していく、シンプルで親しみやすいカジュアルゲームです。<br>
-										<strong>11日間という短期間</strong>で開発を完遂し、基本機能の実装からデプロイまでを行いました。<br>
+										同じ種類フルーツを繋げて消していく、シンプルで親しみやすいカジュアルゲームです。<br>
+										11日間という短期間で開発を完遂し、基本機能の実装からデプロイまでを行いました。<br>
 										シンプルながら中毒性のある操作感と、スコアシステムによるやりこみ要素を実現しています。
-									</span>	
-										<p class="icon">
-											<span>
-												<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
-													<i class="bi-controller"></i>
-													Play
-												</a>
-											</span>
-											<span>
-												<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
-													<i class="icon-github"></i>
-													Github
-												</a>
-											</span>										
-										</p>
+									</p>
+									<div class="project-links">
+										<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
+											<i class="bi-controller"></i>
+											Play
+										</a>
+										<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
+											<i class="icon-github"></i>
+											Github
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>
 											
 						<!-- KDDI採用ページ -->
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/kag-timeline-top.png);">
-								<div class="desc">
-									<div class="con">
-										<h3>
-											<a href="https://note.com/jazzy_stilt4813/n/nf9eff692f744?magazine_key=m4c640645e757" target="_blank">
+						<div class="col-md-12 " >
+							<div class="project-card">
+								<div class="project-image">
+									<img src="images/kag-timeline-top.png" alt="KDDI採用ページ">
+								</div>
+								<div class="project-content">
+									<h3>
+										<a href="https://note.com/jazzy_stilt4813/n/nf9eff692f744?magazine_key=m4c640645e757" target="_blank">
 												KDDI KAGインターンシップ
-											</a>
-										</h3>
-										<span>
-											KDDIアジャイル開発センター（KAG）のインターンシップに参加し、<br>
-											<strong>エンジニアコース</strong>を受講しました。<br>
-											<strong>アジャイル開発</strong>の実務レベルの体験や、<br>
-											デザインプロセスを通じた技術実装の方法を学びました。<br>
-											2日間のインターンシップを通じて、実践的なアジャイル開発手法を習得しました。
-										</span>
-										<p class="icon">
-											<span>
-												<a href="https://note.com/jazzy_stilt4813/n/nf9eff692f744?magazine_key=m4c640645e757" target="_blank">
-													<i class="bi-box-arrow-up-right"></i>
-													Website
-												</a>
-											</span>
-										</p>
+										</a>
+									</h3>
+									<p class="project-description">
+										KDDIアジャイル開発センター（KAG）のインターンシップに参加し、<br>
+										<strong>エンジニアコース</strong>を受講しました。<br>
+										<strong>アジャイル開発</strong>の実務レベルの体験や、<br>
+										デザインプロセスを通じた技術実装の方法を学びました。<br>
+										2日間のインターンシップを通じて、実践的なアジャイル開発手法を習得しました。
+									</p>
+									<div class="project-links">
+										<a href="https://note.com/jazzy_stilt4813/n/nf9eff692f744?magazine_key=m4c640645e757" target="_blank">
+											<i class="bi-box-arrow-up-right"></i>
+											Website
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>
 						
 						<!-- Etude -->
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-							<div class="project" style="background-image: url(images/etude.png);">
-								<div class="desc">
-									<div class="con">
-										<h3>
-											<a href="https://tsukuba-cojt.github.io/results/2022spring/musicgame-team/" target="_blank">
+						<div class="col-md-12 " >
+							<div class="project-card">
+								<div class="project-image">
+									<img src="images/etude.png" alt="Etude">
+								</div>
+								<div class="project-content">
+									<h3>
+										<a href="https://tsukuba-cojt.github.io/results/2022spring/musicgame-team/" target="_blank">
 												Etude
-											</a>
-										</h3>
-										<span>
-											<strong>「楽しく楽譜を読む練習ができる音ゲー​！」</strong>をテーマに<br>
+										</a>
+									</h3>
+									<p class="project-description">
+										<strong>「楽しく楽譜を読む練習ができる音ゲー​！」</strong>をテーマに<br>
 											制作した教育向けゲームです。<br>
 											五線譜上に流れる音符に合わせて、タイミングよくスペースキーをタップ！<br>
 											<strong>楽譜を読むための力</strong>を、ゲーム感覚で楽しく身につけることができます。
-										</span>
-										<p class="icon">
-											<span>
-												<a href="https://tsukuba-cojt.github.io/results/2022spring/musicgame-team/" target="_blank">
-													<i class="bi-box-arrow-up-right"></i>
-													Website
-												</a>
-											</span>
-											<span>
-												<a href="https://github.com/rikutons/COJTRhythmGame" target="_blank">
-													<i class="icon-github"></i>
-													Github
-												</a>
-											</span>
-											<span>
-												<a href="https://www.youtube.com/watch?v=8uqVHZiWv8I&t=541s"target="_blank">
+									</p>
+									<div class="project-links">
+										<a href="https://tsukuba-cojt.github.io/results/2022spring/musicgame-team/" target="_blank">
+											<i class="bi-box-arrow-up-right"></i>
+											Website
+										</a>
+										<a href="https://github.com/rikutons/COJTRhythmGame" target="_blank">
+											<i class="icon-github"></i>
+											Github
+										</a>
+										<a href="https://www.youtube.com/watch?v=8uqVHZiWv8I&t=541s" target="_blank">
 													<i class="bi-youtube"></i> 
-													Youtube
-												</a>
-											</span>
-											<span>
-												<a href="https://unityroom.com/games/etude" target="_blank">
-													<i class="bi-controller"></i> 
-													Play
-												</a>
-											</span>
-										</p>
+											Youtube
+										</a>
+										<a href="https://unityroom.com/games/etude" target="_blank">
+											<i class="bi-controller"></i> 
+											Play
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>
 						<!-- RPGText -->
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInRight">
-							<div class="project" style="background-image: url(images/rpgtext.png);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://dev.bukkit.org/projects/rpgtext" target="_blank">
-											RPGText</a></h3>
-										<span>
-											サンドボックスゲーム「Minecraft」のプラグインです。<br>
+						<div class="col-md-12 " >
+							<div class="project-card">
+								<div class="project-image">
+									<img src="images/rpgtext.png" alt="RPGText">
+								</div>
+								<div class="project-content">
+									<h3>
+										<a href="https://dev.bukkit.org/projects/rpgtext" target="_blank">
+											RPGText
+										</a>
+									</h3>
+									<p class="project-description">
+										サンドボックスゲーム「Minecraft」のプラグインです。<br>
 											<strong>RPGゲームのように会話できるシステム</strong>を追加します。<br>
-											また、ゲームシナリオの作成を補助する便利な機能を追加します。<br>
-										</span>
-										<p class="icon">
-											<span><a href="https://dev.bukkit.org/projects/rpgtext" target="_blank">
-												<i class="bi-box-arrow-up-right"></i> Bukkit</a></span>
-											<span><a href="https://github.com/seisyun9665/RPGText" target="_blank">
-												<i class="icon-github"></i> Github</a></span>
-											<span><a href="https://www.youtube.com/watch?v=M_5aXge_llU" target="_blank">
-												<i class="bi-youtube"></i> Youtube</a></span>
-										</p>
+										また、ゲームシナリオの作成を補助する便利な機能を追加します。<br>
+									</p>
+									<div class="project-links">
+										<a href="https://dev.bukkit.org/projects/rpgtext" target="_blank">
+											<i class="bi-box-arrow-up-right"></i> Bukkit
+										</a>
+										<a href="https://github.com/seisyun9665/RPGText" target="_blank">
+											<i class="icon-github"></i> Github
+										</a>
+										<a href="https://www.youtube.com/watch?v=M_5aXge_llU" target="_blank">
+											<i class="bi-youtube"></i> Youtube
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>
 						<!-- NAROU RPG -->
 						<!-- AWS・OCI -->
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-							<div class="project" style="background-image: url(images/NAROURPG.png);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://narourpg.web.app/" target="_blank">
-											NAROU RPG</a></h3>
-										<span>
-											個人で開発している<strong>オンラインRPGゲーム</strong>プロジェクトです。<br>
-											<strong>Java</strong>でゲーム本体を開発し、<strong>React + TypeScript</strong>で
-											公式サイトを制作しました。<br>
-											<strong>Firebase</strong>でホスティングを行い、<strong>Fincode</strong>を利用した
-											決済システムを導入。<br>
-											収益化を目指した<strong>課金システム</strong>の実装まで行いました。
-										</span>
-										<p class="icon">
-											<span><a href="https://narourpg.web.app/" target="_blank">
-												<i class="bi-box-arrow-up-right"></i> Website</a></span>
-										</p>
+						<div class="col-md-12 " >
+							<div class="project-card">
+								<div class="project-image">
+									<img src="images/NAROURPG.png" alt="NAROU RPG">
+								</div>
+								<div class="project-content">
+									<h3>
+										<a href="https://narourpg.web.app/" target="_blank">
+											NAROU RPG
+										</a>
+									</h3>
+									<p class="project-description">
+										個人で開発している<strong>オンラインRPGゲーム</strong>プロジェクトです。<br>
+										<strong>Java</strong>でゲーム本体を開発し、<strong>React + TypeScript</strong>で
+										公式サイトを制作しました。<br>
+										<strong>Firebase</strong>でホスティングを行い、<strong>Fincode</strong>を利用した
+										決済システムを導入。<br>
+										収益化を目指した<strong>課金システム</strong>の実装まで行いました。
+									</p>
+									<div class="project-links">
+										<a href="https://narourpg.web.app/" target="_blank">
+											<i class="bi-box-arrow-up-right"></i> Website
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>
 						<!-- 研究 -->
-						<div class="col-md-6 animate-box" data-animate-effect="fadeInTop">
-							<div class="project" style="background-image: url(images/paper.png);">
-								<div class="desc">
-									<div class="con">
-										<h3><a href="https://tzkwkblab.github.io/wkblab/award/2024/03/08/DEIM2024-award.html" target="_blank">
-											機械学習・自然言語処理</a></h3>
-										<span>
-											高等専門学校の卒業研究で、オンライン小説サイトのランキング予測機械学習モデルの構築を行いました。
-											<strong>予測精度90%以上を達成し、先行研究を上回る予測精度となりました。</strong><br>
-											大学の卒業研究で、類似する画像群に対して誤解のないキプションを生成する研究を行い、
-											<strong>DEIM2024学生プレゼンテーション賞を受賞しました。</strong>
-											現在は筑波大学大学院にて、AIモデルの推測理由を抽出する、コンセプトボトルネックモデルに関する研究を行っております。
-										</span>
-										<p class="icon">
-											<span><a href="https://tzkwkblab.github.io/wkblab/award/2024/03/08/DEIM2024-award.html" target="_blank">
-												<i class="bi-box-arrow-up-right"></i> DEIM2024受賞</a></span>
-										</p>
+						<div class="col-md-12 " >
+							<div class="project-card">
+								<div class="project-image">
+									<img src="images/paper.png" alt="研究">
+								</div>
+								<div class="project-content">
+									<h3>
+										<a href="https://tzkwkblab.github.io/wkblab/award/2024/03/08/DEIM2024-award.html" target="_blank">
+											機械学習・自然然言語処理
+										</a>
+									</h3>
+									<p class="project-description">
+										高等専門学校の業研究で、オンライン小説サイトのランキング予測機械学習モデルの構築を行いました。<br>
+										<strong>予測精度90%以上を達成し、先行研究を上回る予測精度となりました。</strong><br>
+										大学の卒業研究で、類似する画像群に対して誤解のないキプションを生成する研究を行い、<br>
+										<strong>DEIM2024学生レゼンテーョン賞を受賞しました。</strong><br>
+										現在は筑波大学大学院にて、AIモデルの推測理由を抽出する、コンセプトボトルネックモデルに関する研究を行っております。
+									</p>
+									<div class="project-links">
+										<a href="https://tzkwkblab.github.io/wkblab/award/2024/03/08/DEIM2024-award.html" target="_blank">
+											<i class="bi-box-arrow-up-right"></i> DEIM2024受賞
+										</a>
 									</div>
 								</div>
 							</div>
@@ -739,43 +955,6 @@ Shun Seino<!-- Copyright <script>document.write(new Date().getFullYear());</scri
 				</div>
 			</section>
 
-			<section class="colorlib-contact" data-section="contact">
-				<div class="colorlib-narrow-content">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
-								<div class="col-md-12">
-									<div class="about-desc">
-										<h2 class="colorlib-heading">Contact</h2>
-										<span>お仕事のご依頼等はメールからお願い致します。</span>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-12">
-									<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-										<div class="colorlib-icon">
-											<i class="icon-globe-outline"></i>
-										</div>
-										<div class="colorlib-text">
-											<p>minecraft.syun0521@gmail.com</p>
-										</div>
-									</div>
-			
-									<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft">
-										<div class="colorlib-icon">
-											<i class="icon-map"></i>
-										</div>
-										<div class="colorlib-text">
-											<p>茨城県つくば市 筑波大学</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
 			
 		</div><!-- end:colorlib-main -->
 	</div><!-- end:container-wrap -->
@@ -801,6 +980,9 @@ Shun Seino<!-- Copyright <script>document.write(new Date().getFullYear());</scri
 	
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
+
+	<!-- Sticky Kit -->
+	<script src="https://cdn.jsdelivr.net/npm/sticky-kit@1.1.3/dist/sticky-kit.min.js"></script>
 
 	</body>
 </html>
