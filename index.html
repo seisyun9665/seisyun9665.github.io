@@ -254,6 +254,34 @@
 	    }
 	}
 
+	/* サイドバーのスタイルを修正 */
+	#colorlib-aside {
+	    transition: all 0.3s ease;
+	    visibility: hidden;
+	    z-index: 1001;
+	}
+
+	body.offcanvas #colorlib-aside {
+	    visibility: visible;
+	}
+
+	/* トグルボタンのスタイルを修正 */
+	.js-colorlib-nav-toggle {
+	    transition: all 0.3s ease;
+	}
+
+	/* メディアクエリ内のスタイルも修正 */
+	@media screen and (max-width: 768px) {
+	    #colorlib-aside {
+	        position: fixed;
+	        left: -270px;
+	        top: 0;
+	        bottom: 0;
+	        width: 270px;
+	        background: #fff;
+	    }
+	}
+
 	</style>
 
 	<!-- Google Fonts - 日本語フォントの追加 -->
@@ -655,301 +683,293 @@
 			<section class="colorlib-work" data-section="work">
 				<div class="colorlib-narrow-content">
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3 col-md-pull-3 " >
-							<h2 class="colorlib-heading ">Work</h2>
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3">
+							<h2 class="colorlib-heading">Work</h2>
 						</div>
 					</div>
-<!-- 
-					<div class="row row-bottom-padded-sm " >
-						<div class="col-md-12">
-							<p class="work-menu">
-								<span><a href="#" class="active">Graphic Design</a></span>
-							</p>
-						</div>
-					</div>
- -->
-						<!-- G2Studio インターンシップ - SAUNA PANIC -->
-						<div class="col-md-12 " >
-							<div class="project-card">
-								<div class="project-image">
-									<img src="images/sauna-result-mini.png" alt="SAUNA PANIC">
-								</div>
-								<div class="project-content">
-									<h3>
-										<a href="https://note.g2-studios.net/n/n71d814f6b5ff?gs=4b4c44f60bfb" target="_blank">
-											SAUNA PANIC
-										</a>
-									</h3>
-									<p class="project-description">
-										<strong>G2Studioインターンシップの3日間チーム開発</strong>プロジェクト<br>
-										UI/UX、サウンド、レベルデザインを担当し、<br>
-										<strong>チーム内の議論・報告のまとめ役</strong>として活動。<br>
-										オンラインでのコミュニケーションや技術レベルの差など、<br>
-										様々な課題を克服しながらプロジェクトを完遂しました。
-									</p>
-									<div class="project-links">
-										<a href="https://note.g2-studios.net/n/n71d814f6b5ff?gs=4b4c44f60bfb" target="_blank">
-											<i class="bi-box-arrow-up-right"></i> Article
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
 
-						<!-- TAYOUSEI GAME -->
-						<div class="col-md-12 " >
-							<div class="project-card">
-								<div class="project-image">
-									<img src="images/tayousei.png" alt="TAYOUSEI GAME">
-								</div>
-								<div class="project-content">
-									<h3>
-										<a href="https://unityroom.com/games/tayoseigame" target="_blank">
-												TAYOUSEI GAME
-										</a>
-									</h3>
-									<p class="project-description">
-										<strong>大学でのチームゲーム開発プロジェクト</strong>として実施。<br>
-										リードエンジニアとして全体を統括し、<br>
-										<strong>VSCODEのLive Share機能</strong>や<strong>アジャイル開発手法</strong>を導入。<br>
-										チームメンバーの成長とプロジェクトの完遂を実現しました。
-									</p>
-									<div class="project-links">
-										<a href="https://unityroom.com/games/tayoseigame" target="_blank">
-											<i class="bi-controller"></i>
-											Play
-										</a>
-										<a href="https://github.com/seisyun9665/TayouseiSuika/" target="_blank">
-											<i class="icon-github"></i>
-											Github
-										</a>
+					<!-- Quiz20 -->
+					<div class="col-md-12">
+						<div class="project-card">
+							<div class="project-image">
+								<img src="images/quiz.png" alt="Quiz20">
+							</div>
+							<div class="project-content">
+								<h3>
+									<a href="https://quiz20-a466c.web.app/" target="_blank">
+										Quiz20
+									</a>
+								</h3>
+								<p class="project-description">
+											<strong>Next.js、TypeScript、TailwindCSS</strong>を使用した<br>
+											モダンなクイズWebアプリケーションです。<br>
+											20問のクイズに挑戦し、結果を確認できる<strong>シンプルで使いやすい</strong>UIを実現。<br>
+											<strong>Firebase</strong>でホスティングを行い、スムーズな本番環境の運用を実現しています。
+										</p>
+										<div class="project-links">
+											<a href="https://quiz20-a466c.web.app/" target="_blank">
+												<i class="bi-box-arrow-up-right"></i> Website
+											</a>
+											<a href="https://github.com/seisyun9665/quiz20" target="_blank">
+												<i class="icon-github"></i> Github
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
 
-						<!-- ラウドサーバー構築 -->	
-						<div class="col-md-12 " >
-							<div class="project-card">
-								<div class="project-image">
-									<img src="images/aws.png" alt="クラウドサーバー構築">
-								</div>
-								<div class="project-content">
-									<h3>クラウドサーバー構築</h3>
-									<p class="project-description">
-										<strong>AWSとOCIを活用したゲームサーバーの構築・運営</strong>プロジェクト。<br>
-										AWSの無料期間を1年間活用した後、<br>
-										<strong>OCIの永久無料枠</strong>でのサーバー運営に移行。<br>
-										サーバー紹介用サイトの公開まで実施しました。
-									</p>
+							<!-- NAROU RPG -->
+							<div class="col-md-12">
+								<div class="project-card">
+									<div class="project-image">
+										<img src="images/NAROURPG.png" alt="NAROU RPG">
+									</div>
+									<div class="project-content">
+										<h3>
+											<a href="https://narourpg.web.app/" target="_blank">
+												NAROU RPG
+											</a>
+										</h3>
+										<p class="project-description">
+											個人で開発している<strong>オンラインRPGゲーム</strong>プロジェクトです。<br>
+											<strong>Java</strong>でゲーム本体を開発し、<strong>React + TypeScript</strong>で
+											公式サイトを制作しました。<br>
+											<strong>Firebase</strong>でホスティングを行い、<strong>Fincode</strong>を利用した
+											決済システムを導入。<br>
+											収益化を目指した<strong>課金システム</strong>の実装まで行いました。
+										</p>
+										<div class="project-links">
+											<a href="https://narourpg.web.app/" target="_blank">
+												<i class="bi-box-arrow-up-right"></i> Website
+											</a>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
 
-						<!-- 運動会企画・運営 -->
-						<div class="col-md-12 " >
-							<div class="project-card">
-								<div class="project-image">
-									<img src="images/sports.png" alt="運動会企画・運営">
-								</div>	
-								<div class="project-content">
-									<h3>運動会企画・運営</h3>
-									<p class="project-description">
-										<strong>人を集めた企画・運営の経験を得るため</strong>に実施。<br>
-										有志による運動会を主催し、<br>
-										協力者への説得や説明での苦労を克服しながら、<br>
-										目標の10人を大きく超える20人規模でのイベント開催を実現。
-									</p>
-								</div>
-							</div>
-						</div>
-						
-						<!-- TsumuTsumuModoki -->
-						<div class="col-md-12 " >
-							<div class="project-card">
-								<div class="project-image">
-									<img src="images/tsumutsumumodoki-mini.png" alt="ツムツムもどき">
-								</div>
-								<div class="project-content">
-									<h3>
-										<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
-											ツムツムもどき
-										</a>
-									</h3>
-									<p class="project-description">
-										<strong>Unity</strong>で開発したパズルゲームです。<br>
-										同じ種類フルーツを繋げて消していく、シンプルで親しみやすいカジュアルゲームです。<br>
-										11日間という短期間で開発を完遂し、基本機能の実装からデプロイまでを行いました。<br>
-										シンプルながら中毒性のある操作感と、スコアシステムによるやりこみ要素を実現しています。
-									</p>
-									<div class="project-links">
-										<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
-											<i class="bi-controller"></i>
-											Play
-										</a>
-										<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
-											<i class="icon-github"></i>
-											Github
-										</a>
+							<!-- SAUNA PANIC -->
+							<div class="col-md-12">
+								<div class="project-card">
+									<div class="project-image">
+										<img src="images/sauna-result-mini.png" alt="SAUNA PANIC">
+									</div>
+									<div class="project-content">
+										<h3>
+											<a href="https://note.g2-studios.net/n/n71d814f6b5ff?gs=4b4c44f60bfb" target="_blank">
+												SAUNA PANIC
+											</a>
+										</h3>
+										<p class="project-description">
+											<strong>G2Studioインターンシップの3日間チーム開発</strong>プロジェクト<br>
+											UI/UX、サウンド、レベルデザインを担当し、<br>
+											<strong>チーム内の議論・報告のまとめ役</strong>として活動。<br>
+											オンラインでのコミュニケーションや技術レベルの差など、<br>
+											様々な課題を克服しながらプロジェクトを完遂しました。
+										</p>
+										<div class="project-links">
+											<a href="https://note.g2-studios.net/n/n71d814f6b5ff?gs=4b4c44f60bfb" target="_blank">
+												<i class="bi-box-arrow-up-right"></i> Article
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-											
-						<!-- KDDI採用ページ -->
-						<div class="col-md-12 " >
-							<div class="project-card">
-								<div class="project-image">
-									<img src="images/kag-timeline-top.png" alt="KDDI採用ページ">
-								</div>
-								<div class="project-content">
-									<h3>
-										<a href="https://note.com/jazzy_stilt4813/n/nf9eff692f744?magazine_key=m4c640645e757" target="_blank">
-												KDDI KAGインターンシップ
-										</a>
-									</h3>
-									<p class="project-description">
-										KDDIアジャイル開発センター（KAG）のインターンシップに参加し、<br>
-										<strong>エンジニアコース</strong>を受講しました。<br>
-										<strong>アジャイル開発</strong>の実務レベルの体験や、<br>
-										デザインプロセスを通じた技術実装の方法を学びました。<br>
-										2日間のインターンシップを通じて、実践的なアジャイル開発手法を習得しました。
-									</p>
-									<div class="project-links">
-										<a href="https://note.com/jazzy_stilt4813/n/nf9eff692f744?magazine_key=m4c640645e757" target="_blank">
-											<i class="bi-box-arrow-up-right"></i>
-											Website
-										</a>
+
+							<!-- TAYOUSEI GAME -->
+							<div class="col-md-12">
+								<div class="project-card">
+									<div class="project-image">
+										<img src="images/tayousei.png" alt="TAYOUSEI GAME">
+									</div>
+									<div class="project-content">
+										<h3>
+											<a href="https://unityroom.com/games/tayoseigame" target="_blank">
+													TAYOUSEI GAME
+											</a>
+										</h3>
+										<p class="project-description">
+											<strong>大学でのチームゲーム開発プロジェクト</strong>として実施。<br>
+											リードエンジニアとして全体を統括し、<br>
+											<strong>VSCODEのLive Share機能</strong>や<strong>アジャイル開発手法</strong>を導入。<br>
+											チームメンバーの成長とプロジェクトの完遂を実現しました。
+										</p>
+										<div class="project-links">
+											<a href="https://unityroom.com/games/tayoseigame" target="_blank">
+												<i class="bi-controller"></i>
+												Play
+											</a>
+											<a href="https://github.com/seisyun9665/TayouseiSuika/" target="_blank">
+												<i class="icon-github"></i>
+												Github
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						
-						<!-- Etude -->
-						<div class="col-md-12 " >
-							<div class="project-card">
-								<div class="project-image">
-									<img src="images/etude.png" alt="Etude">
-								</div>
-								<div class="project-content">
-									<h3>
-										<a href="https://tsukuba-cojt.github.io/results/2022spring/musicgame-team/" target="_blank">
-												Etude
-										</a>
-									</h3>
-									<p class="project-description">
-										<strong>「楽しく楽譜を読む練習ができる音ゲー​！」</strong>をテーマに<br>
-											制作した教育向けゲームです。<br>
-											五線譜上に流れる音符に合わせて、タイミングよくスペースキーをタップ！<br>
-											<strong>楽譜を読むための力</strong>を、ゲーム感覚で楽しく身につけることができます。
-									</p>
-									<div class="project-links">
-										<a href="https://tsukuba-cojt.github.io/results/2022spring/musicgame-team/" target="_blank">
-											<i class="bi-box-arrow-up-right"></i>
-											Website
-										</a>
-										<a href="https://github.com/rikutons/COJTRhythmGame" target="_blank">
-											<i class="icon-github"></i>
-											Github
-										</a>
-										<a href="https://www.youtube.com/watch?v=8uqVHZiWv8I&t=541s" target="_blank">
-													<i class="bi-youtube"></i> 
-											Youtube
-										</a>
-										<a href="https://unityroom.com/games/etude" target="_blank">
-											<i class="bi-controller"></i> 
-											Play
-										</a>
+
+							<!-- TsumuTsumuModoki -->
+							<div class="col-md-12">
+								<div class="project-card">
+									<div class="project-image">
+										<img src="images/tsumutsumumodoki-mini.png" alt="ツムツムもどき">
+									</div>
+									<div class="project-content">
+										<h3>
+											<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
+												ツムツムもどき
+											</a>
+										</h3>
+										<p class="project-description">
+											<strong>Unity</strong>で開発したパズルゲームです。<br>
+											同じ種類フルーツを繋げて消していく、シンプルで親しみやすいカジュアルゲームです。<br>
+											11日間という短期間で開発を完遂し、基本機能の実装からデプロイまでを行いました。<br>
+											シンプルながら中毒性のある操作感と、スコアシステムによるやりこみ要素を実現しています。
+										</p>
+										<div class="project-links">
+											<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
+												<i class="bi-controller"></i>
+												Play
+											</a>
+											<a href="https://github.com/seisyun9665/TsumutsumuModoki" target="_blank">
+												<i class="icon-github"></i>
+												Github
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<!-- RPGText -->
-						<div class="col-md-12 " >
-							<div class="project-card">
-								<div class="project-image">
-									<img src="images/rpgtext.png" alt="RPGText">
-								</div>
-								<div class="project-content">
-									<h3>
-										<a href="https://dev.bukkit.org/projects/rpgtext" target="_blank">
-											RPGText
-										</a>
-									</h3>
-									<p class="project-description">
-										サンドボックスゲーム「Minecraft」のプラグインです。<br>
-											<strong>RPGゲームのように会話できるシステム</strong>を追加します。<br>
-										また、ゲームシナリオの作成を補助する便利な機能を追加します。<br>
-									</p>
-									<div class="project-links">
-										<a href="https://dev.bukkit.org/projects/rpgtext" target="_blank">
-											<i class="bi-box-arrow-up-right"></i> Bukkit
-										</a>
-										<a href="https://github.com/seisyun9665/RPGText" target="_blank">
-											<i class="icon-github"></i> Github
-										</a>
-										<a href="https://www.youtube.com/watch?v=M_5aXge_llU" target="_blank">
-											<i class="bi-youtube"></i> Youtube
-										</a>
+
+							<!-- KDDI KAGインターンシップ -->
+							<div class="col-md-12">
+								<div class="project-card">
+									<div class="project-image">
+										<img src="images/kag-timeline-top.png" alt="KDDI採用ページ">
+									</div>
+									<div class="project-content">
+										<h3>
+											<a href="https://note.com/jazzy_stilt4813/n/nf9eff692f744?magazine_key=m4c640645e757" target="_blank">
+													KDDI KAGインターンシップ
+											</a>
+										</h3>
+										<p class="project-description">
+											KDDIアジャイル開発センター（KAG）のインターンシップに参加し、<br>
+											<strong>エンジニアコース</strong>を受講しました。<br>
+											<strong>アジャイル開発</strong>の実務レベルの体験や、<br>
+											デザインプロセスを通じた技術実装の方法を学びました。<br>
+											2日間のインターンシップを通じて、実践的なアジャイル開発手法を習得しました。
+										</p>
+										<div class="project-links">
+											<a href="https://note.com/jazzy_stilt4813/n/nf9eff692f744?magazine_key=m4c640645e757" target="_blank">
+												<i class="bi-box-arrow-up-right"></i>
+												Website
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<!-- NAROU RPG -->
-						<!-- AWS・OCI -->
-						<div class="col-md-12 " >
-							<div class="project-card">
-								<div class="project-image">
-									<img src="images/NAROURPG.png" alt="NAROU RPG">
-								</div>
-								<div class="project-content">
-									<h3>
-										<a href="https://narourpg.web.app/" target="_blank">
-											NAROU RPG
-										</a>
-									</h3>
-									<p class="project-description">
-										個人で開発している<strong>オンラインRPGゲーム</strong>プロジェクトです。<br>
-										<strong>Java</strong>でゲーム本体を開発し、<strong>React + TypeScript</strong>で
-										公式サイトを制作しました。<br>
-										<strong>Firebase</strong>でホスティングを行い、<strong>Fincode</strong>を利用した
-										決済システムを導入。<br>
-										収益化を目指した<strong>課金システム</strong>の実装まで行いました。
-									</p>
-									<div class="project-links">
-										<a href="https://narourpg.web.app/" target="_blank">
-											<i class="bi-box-arrow-up-right"></i> Website
-										</a>
+
+							<!-- Etude -->
+							<div class="col-md-12">
+								<div class="project-card">
+									<div class="project-image">
+										<img src="images/etude.png" alt="Etude">
+									</div>
+									<div class="project-content">
+										<h3>
+											<a href="https://tsukuba-cojt.github.io/results/2022spring/musicgame-team/" target="_blank">
+													Etude
+											</a>
+										</h3>
+										<p class="project-description">
+											<strong>「楽しく楽譜を読む練習ができる音ゲー！」</strong>をテーマに<br>
+												制作した教育向けゲームです。<br>
+												五線譜上に流れる音符に合わせて、タイミングよくスペースキーをタップ！<br>
+												<strong>楽譜を読むための力</strong>を、ゲーム感覚で楽しく身につけることができます。
+										</p>
+										<div class="project-links">
+											<a href="https://tsukuba-cojt.github.io/results/2022spring/musicgame-team/" target="_blank">
+												<i class="bi-box-arrow-up-right"></i>
+												Website
+											</a>
+											<a href="https://github.com/rikutons/COJTRhythmGame" target="_blank">
+												<i class="icon-github"></i>
+												Github
+											</a>
+											<a href="https://www.youtube.com/watch?v=8uqVHZiWv8I&t=541s" target="_blank">
+														<i class="bi-youtube"></i> 
+												Youtube
+											</a>
+											<a href="https://unityroom.com/games/etude" target="_blank">
+												<i class="bi-controller"></i> 
+												Play
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						<!-- 研究 -->
-						<div class="col-md-12 " >
-							<div class="project-card">
-								<div class="project-image">
-									<img src="images/paper.png" alt="研究">
-								</div>
-								<div class="project-content">
-									<h3>
-										<a href="https://tzkwkblab.github.io/wkblab/award/2024/03/08/DEIM2024-award.html" target="_blank">
-											機械学習・自然然言語処理
-										</a>
-									</h3>
-									<p class="project-description">
-										高等専門学校の業研究で、オンライン小説サイトのランキング予測機械学習モデルの構築を行いました。<br>
-										<strong>予測精度90%以上を達成し、先行研究を上回る予測精度となりました。</strong><br>
-										大学の卒業研究で、類似する画像群に対して誤解のないキプションを生成する研究を行い、<br>
-										<strong>DEIM2024学生レゼンテーョン賞を受賞しました。</strong><br>
-										現在は筑波大学大学院にて、AIモデルの推測理由を抽出する、コンセプトボトルネックモデルに関する研究を行っております。
-									</p>
-									<div class="project-links">
-										<a href="https://tzkwkblab.github.io/wkblab/award/2024/03/08/DEIM2024-award.html" target="_blank">
-											<i class="bi-box-arrow-up-right"></i> DEIM2024受賞
-										</a>
+
+							<!-- RPGText -->
+							<div class="col-md-12">
+								<div class="project-card">
+									<div class="project-image">
+										<img src="images/rpgtext.png" alt="RPGText">
+									</div>
+									<div class="project-content">
+										<h3>
+											<a href="https://dev.bukkit.org/projects/rpgtext" target="_blank">
+												RPGText
+											</a>
+										</h3>
+										<p class="project-description">
+											サンドボックスゲーム「Minecraft」のプラグインです。<br>
+												<strong>RPGゲームのように会話できるシステム</strong>を追加します。<br>
+												また、ゲームシナリオの作成を補助する便利な機能を追加します。<br>
+												</p>
+												<div class="project-links">
+													<a href="https://dev.bukkit.org/projects/rpgtext" target="_blank">
+														<i class="bi-box-arrow-up-right"></i> Bukkit
+													</a>
+													<a href="https://github.com/seisyun9665/RPGText" target="_blank">
+														<i class="icon-github"></i> Github
+													</a>
+													<a href="https://www.youtube.com/watch?v=M_5aXge_llU" target="_blank">
+														<i class="bi-youtube"></i> Youtube
+													</a>
+												</div>
+										</div>
 									</div>
 								</div>
 							</div>
+
+							<!-- 研究 -->
+							<div class="col-md-12">
+								<div class="project-card">
+									<div class="project-image">
+										<img src="images/paper.png" alt="研究">
+									</div>
+									<div class="project-content">
+										<h3>
+											<a href="https://tzkwkblab.github.io/wkblab/award/2024/03/08/DEIM2024-award.html" target="_blank">
+												機械学習・自然然言語処理
+											</a>
+										</h3>
+										<p class="project-description">
+											高等専門学校の卒業研究で、オンライン小説サイトのランキング予測機械学習モデルの構築を行いました。<br>
+											<strong>予測精度90%以上を達成し、先行研究を上回る予測精度となりました。</strong><br>
+											大学の卒業研究で、類似する画像群に対して誤解のないキャプションを生成する研究を行い、<br>
+											<strong>DEIM2024学生プレゼンテーション賞を受賞しました。</strong><br>
+											現在は筑波大学大学院にて、AIモデルの推測理由を出力する、コンセプトボトルネックモデルに関する研究を行っております。
+										</p>
+										<div class="project-links">
+											<a href="https://tzkwkblab.github.io/wkblab/award/2024/03/08/DEIM2024-award.html" target="_blank">
+												<i class="bi-box-arrow-up-right"></i> DEIM2024受賞
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+å
+
 						</div>
 					</div>
 				</div>

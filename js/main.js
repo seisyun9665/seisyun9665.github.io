@@ -104,14 +104,34 @@
 
 			if ($('body').hasClass('offcanvas')) {
 				$this.removeClass('active');
-				$('body').removeClass('offcanvas');	
+				$('body').removeClass('offcanvas');
+				$this.removeClass('active');
+				$('#colorlib-aside').css({
+					'transform': 'translateX(0)',
+					'visibility': 'hidden'
+				});
 			} else {
 				$this.addClass('active');
-				$('body').addClass('offcanvas');	
+				$('body').addClass('offcanvas');
+				$('#colorlib-aside').css({
+					'transform': 'translateX(270px)',
+					'visibility': 'visible'
+				});
 			}
 		});
 
-
+		$(document).on('click', function(event) {
+			if (!$(event.target).closest('#colorlib-aside, .js-colorlib-nav-toggle').length) {
+				if ($('body').hasClass('offcanvas')) {
+					$('body').removeClass('offcanvas');
+					$('.js-colorlib-nav-toggle').removeClass('active');
+					$('#colorlib-aside').css({
+						'transform': 'translateX(0)',
+						'visibility': 'hidden'
+					});
+				}
+			}
+		});
 
 	};
 
