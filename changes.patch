@@ -1,0 +1,37 @@
+commit c4d10ffd190832df55269dd297085212645c2537
+Author: Shun Seino <58073880+seisyun9665@users.noreply.github.com>
+Date:   Thu Nov 7 01:38:36 2024 +0900
+
+    誤字修正
+
+diff --git a/index.html b/index.html
+index 85c873a..9416fcc 100644
+--- a/index.html
++++ b/index.html
+@@ -554,7 +554,7 @@
+ 								   <p>
+ 										3度の飯よりゲームが好き。<strong>ニンテンドーDS</strong>に最も強い興味を示す。<br>
+ 										親が使っていたパソコンにも強烈に興味を示し、
+-										半ば本能的に<strong>タイピング技術を会得</strong>する。
++										半ば本能的に<strong>タイピング技術を体得</strong>する。
+ 									</p>
+ 
+ 					               </div>
+@@ -605,7 +605,7 @@
+ 											<i class="bi-box-arrow-up-right"></i>
+ 										</a>
+ 										を開催し、<br>
+-										<strong>サークル</strong>としていろいろ頑張った。
++										<strong>部長</strong>としていろいろ頑張った。
+ 									</p>
+ 					               </div>
+ 					            </div>
+@@ -624,7 +624,7 @@
+ 										<span>2022-now</span></h2>
+ 									<p>
+ 										<strong>情報メディア創成学類の3年生</strong>として<strong>編入</strong>を果たす。<br>
+-										より度な情報技術を学びつつ、<br>
++										より高度な情報技術を学びつつ、<br>
+ 										<a href="https://tsukuba-cojt.github.io/" target="_blank">
+ 											COJT 組み込み技術キャンパスOJT
+ 											<i class="bi-box-arrow-up-right"></i>
